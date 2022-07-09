@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var cors = require('cors');
 
 //JSON file for deployed contract and network information
 const mainContractJSON = require('/MainContract.json')
@@ -8,6 +9,7 @@ const electionJSON = require('/Election.json')
 require("dotenv").config();
 
 app.use(express.static("./"));
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.sendFile('index.html');
