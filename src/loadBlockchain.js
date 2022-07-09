@@ -43,7 +43,7 @@ export var Default = {
   // This function would help in loading contract to Default.MainContract
   loadMainContract: async () => {
     // Static pre-deployed contracts should be handled like this
-    const MainContract = await $.getJSON('https://jsonkeeper.com/b/UQQ4');
+    const MainContract = await $.getJSON('https://api.npoint.io/80ee4293f00fa2981005');
     Default.contracts.MainContract = TruffleContract(MainContract);
     Default.contracts.MainContract.setProvider(Default.web3Provider);
     Default.MainContract = await Default.contracts.MainContract.deployed();
