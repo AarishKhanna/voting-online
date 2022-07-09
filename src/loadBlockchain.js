@@ -1,4 +1,5 @@
 import {ElectionData} from './loadElections.js';
+import {mainContractJSON} from './server.js';
 let x;
 // Default would contain all the necessary functions for interaction
 export var Default = {
