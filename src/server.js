@@ -16,14 +16,16 @@ app.get('/', (req, res) => {
 });
 
 //Sending MainContract JSON file for its interaction using Truffle
-app.get('/mainContractJSON', (req, res) => {
+app.get('/', (req, res) => {
     console.log(mainContractJSON.json);
     res.send(mainContractJSON);
+    res.json(mainContractJSON);
 });
 
 //Sending ABI object directly for Election contract, since only ABI will be used
-app.get('/electionJSON', (req, res) => {
-    res.send(electionJSON.abi)
+app.get('/', (req, res) => {
+    res.send(electionJSON.abi);
+    res.json(electionJSON.abi);
 });
 
 app.listen(process.env.PORT || 3000, () => {
