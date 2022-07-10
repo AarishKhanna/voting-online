@@ -3,8 +3,8 @@ var app = express();
 //var cors = require('cors');
 
 //JSON file for deployed contract and network information
-const mainContractJSON = require('https://api.npoint.io/80ee4293f00fa2981005')
-const electionJSON = require('https://api.npoint.io/be3da449ab6257da7f4e')
+const mainContractJSON = require('/src/MainContract.json')
+const electionJSON = require('/src/Election.json')
 
 require("dotenv").config();
 
