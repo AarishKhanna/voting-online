@@ -1,5 +1,5 @@
 import {ElectionData} from './loadElections.js';
-import mainContractJSON from "./build/contracts/MainContract.json.json";
+//import mainContractJSON from "./build/contracts/MainContract.json.json";
 let x;
 // Default would contain all the necessary functions for interaction
 export var Default = {
@@ -43,7 +43,7 @@ export var Default = {
   // This function would help in loading contract to Default.MainContract
   loadMainContract: async () => {
     // Static pre-deployed contracts should be handled like this
-    const MainContract = await $.getJSON('mainContractJSON');
+    const MainContract = await $.getJSON('/mainContractJSON');
     Default.contracts.MainContract = TruffleContract(MainContract);
     Default.contracts.MainContract.setProvider(Default.web3Provider);
     Default.MainContract = await Default.contracts.MainContract.deployed();
