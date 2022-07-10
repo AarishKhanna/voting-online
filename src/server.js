@@ -3,8 +3,8 @@ var app = express();
 //var cors = require('cors');
 
 //JSON file for deployed contract and network information
-const mainContractJSON = require('https://github.com/AarishKhanna/voting-online/blob/main/src/build/contracts/MainContract.json')
-const electionJSON = require('https://github.com/AarishKhanna/voting-online/blob/main/src/build/contracts/Election.json')
+const mainContractJSON = require('./build/contracts/MainContract.json')
+const electionJSON = require('./build/contracts/Election.json')
 
 require("dotenv").config();
 
