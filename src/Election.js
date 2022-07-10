@@ -14,7 +14,7 @@ init = async () => {
 // Loading election contract's javascript equivalent in the this.election variable
 loadElectionContract = async () => {
   // Dynamic contracts whose address is not known should be handled like this
-  var electionABI = await $.getJSON('https://github.com/AarishKhanna/voting-online/blob/main/src/build/contracts/Election.json');
+  var electionABI = await $.getJSON('/electionJSON');
   this.election = await new web3.eth.Contract(electionABI, this.address);
   await this.election.setProvider(web3.currentProvider);
 }
