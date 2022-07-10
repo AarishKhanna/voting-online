@@ -1,5 +1,6 @@
 import {Default} from './loadBlockchain.js';
 import {ElectionData} from './loadElections.js';
+import electionJSON from "./build/contracts/Election.json";
 
 // Election class for maintaining separate states for each election contract
 export class Election {
@@ -14,7 +15,7 @@ init = async () => {
 // Loading election contract's javascript equivalent in the this.election variable
 loadElectionContract = async () => {
   // Dynamic contracts whose address is not known should be handled like this
-  var electionABI = await $.getJSON('/electionJSON');
+  var electionABI = await $.getJSON('electionJSON');
   this.election = await new web3.eth.Contract(electionABI, this.address);
   await this.election.setProvider(web3.currentProvider);
 }
