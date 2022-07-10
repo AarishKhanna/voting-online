@@ -2,8 +2,8 @@ var express = require('express');
 var app = express();
 
 //JSON file for deployed contract and network information
-const mainContractJSON = require('/Users/aarishkhanna/voting_App/src/build/contracts/MainContract.json')
-const electionJSON = require('/Users/aarishkhanna/voting_App/src/build/contracts/Election.json')
+const mainContractJSON = require('src/build/contracts/MainContract.json')
+const electionJSON = require('src/build/contracts/Election.json')
 
 require("dotenv").config();
 
